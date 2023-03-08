@@ -7,7 +7,7 @@ let displayChoice = document.querySelector(".displayChoice");
 let displayCompChoice = document.querySelector(".displayCompChoice");
 let displayResult = document.querySelector(".result");
 
-
+//generates randomly the computer's answer(rock=0 paper=1 or scissors=2)
 function computerAnswer(){
   let number = Math.floor(Math.random() * 3)
   if(number == 0){
@@ -22,6 +22,7 @@ function computerAnswer(){
   };
 };
 
+//compares the player answer with the computer answer
 function compareAnswers(computerAnswer){
   if(playerAnswer == computerAnswer){
     displayResult.innerHTML = "Draw!"
@@ -30,7 +31,7 @@ function compareAnswers(computerAnswer){
   }else if(playerAnswer == 0 && computerAnswer == 2){
     displayResult.innerHTML = "You Won!"
   }else if(playerAnswer == 1 && computerAnswer == 0){
-    displayResult.innerHTML = "You Lost :("
+    displayResult.innerHTML = "You Won!"
   }else if(playerAnswer == 1 && computerAnswer == 2){
     displayResult.innerHTML = "You Lost :("
   }else if(playerAnswer == 2 && computerAnswer == 0){
